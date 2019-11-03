@@ -21,7 +21,7 @@ struct Item {
     var name: String
     var description: String
     var uuid: UUID
-    var color: Int // hex
+    var color: String
     var image: UIImage
     var dateAdded: String //@TODO: Parse to date lol
     var category: Category

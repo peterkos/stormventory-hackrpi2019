@@ -20,15 +20,9 @@ class StorageCollectionViewController: UICollectionViewController, UserDataHandl
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Uncomment the following line to preserve selection between presentations
-        // self.clearsSelectionOnViewWillAppear = false
-
-        // Register cell classes
-        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
-
         let layout = VegaScrollFlowLayout()
         layout.minimumLineSpacing = 20
-        layout.itemSize = CGSize(width: collectionView.frame.width - 40, height: 200)
+        layout.itemSize = CGSize(width: collectionView.frame.width - 40, height: 350)
         layout.sectionInset = UIEdgeInsets(top: 40, left: 0, bottom: 40, right: 0)
 
         self.collectionView.collectionViewLayout = layout
@@ -41,21 +35,35 @@ class StorageCollectionViewController: UICollectionViewController, UserDataHandl
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return Category.allCases.count
+        return 1
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
 
         // Filter out items of each corresponding section type
-        return user.items.filter({ $0.category == Category.allCases[section]}).count
+        return user.items.count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ItemCollectionViewCell
     
-        cell.backgroundColor = #colorLiteral(red: 0.2117647059, green: 0.2784313725, blue: 0.3450980392, alpha: 1)
-    
+        cell.imageView.backgroundColor = #colorLiteral(red: 0.2117647059, green: 0.2784313725, blue: 0.3450980392, alpha: 1)
+        cell.imageView.layer.masksToBounds = true
+        cell.backgroundColor = .white
+
+        cell.layer.cornerRadius = 8
+
+        let shadowPath = UIBezierPath(rect: cell.bounds)
+//        cell.layer.masksToBounds = false
+        cell.layer.shadowColor = UIColor.black.cgColor
+        cell.layer.shadowOffset = CGSize(width: 0, height: 0.5)
+        cell.layer.shadowOpacity = 0.1
+        cell.layer.shadowPath = shadowPath.cgPath
+
+        cell.layer.borderWidth = 1.0
+        cell.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+
         return cell
     }
 

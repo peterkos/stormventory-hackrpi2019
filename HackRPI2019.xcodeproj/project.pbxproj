@@ -11,6 +11,7 @@
 		D7831A9D236EA3B500B92E24 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7831A9C236EA3B500B92E24 /* User.swift */; };
 		D7831A9F236EA6D500B92E24 /* StorageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7831A9E236EA6D500B92E24 /* StorageCollectionViewController.swift */; };
 		D7831AA3236EA7EA00B92E24 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7831AA2236EA7EA00B92E24 /* MainTabBarViewController.swift */; };
+		D7831AA6236EB95300B92E24 /* ItemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7831AA5236EB95300B92E24 /* ItemCollectionViewCell.swift */; };
 		D7A0D40B236E1B760072097A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A0D40A236E1B760072097A /* AppDelegate.swift */; };
 		D7A0D412236E1B760072097A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A0D410236E1B760072097A /* Main.storyboard */; };
 		D7A0D414236E1B760072097A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7A0D413236E1B760072097A /* Assets.xcassets */; };
@@ -29,6 +30,7 @@
 		D7831A9C236EA3B500B92E24 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D7831A9E236EA6D500B92E24 /* StorageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCollectionViewController.swift; sourceTree = "<group>"; };
 		D7831AA2236EA7EA00B92E24 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
+		D7831AA5236EB95300B92E24 /* ItemCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemCollectionViewCell.swift; sourceTree = "<group>"; };
 		D7A0D407236E1B760072097A /* Stormventory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stormventory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A0D40A236E1B760072097A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7A0D411236E1B760072097A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -71,6 +73,14 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
+		D7831AA4236EB93C00B92E24 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D7831AA5236EB95300B92E24 /* ItemCollectionViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
 		D7A0D3FE236E1B760072097A = {
 			isa = PBXGroup;
 			children = (
@@ -92,6 +102,7 @@
 		D7A0D409236E1B760072097A /* HackRPI2019 */ = {
 			isa = PBXGroup;
 			children = (
+				D7831AA4236EB93C00B92E24 /* Views */,
 				D7831A9B236EA3A500B92E24 /* Models */,
 				D7F5B592236E8DB10082DD1C /* Auth0 */,
 				D7A0D420236E1F1A0072097A /* Controllers */,
@@ -252,6 +263,7 @@
 				D7A0D422236E1FA80072097A /* ViewController.swift in Sources */,
 				D7831AA3236EA7EA00B92E24 /* MainTabBarViewController.swift in Sources */,
 				D7F5B591236E2FC30082DD1C /* Keys.swift in Sources */,
+				D7831AA6236EB95300B92E24 /* ItemCollectionViewCell.swift in Sources */,
 				D7831A9F236EA6D500B92E24 /* StorageCollectionViewController.swift in Sources */,
 				D7831A9D236EA3B500B92E24 /* User.swift in Sources */,
 				D7A0D40B236E1B760072097A /* AppDelegate.swift in Sources */,

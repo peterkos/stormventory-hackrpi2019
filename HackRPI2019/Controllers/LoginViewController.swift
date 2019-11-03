@@ -45,11 +45,11 @@ class LoginViewController: UIViewController {
 
         // @FIXME: Pull user data from server after auth!
         // This is TEST DATA for now.
-        user = User(name: "Joe", items: [Item(name: "Chair",  description: "it sits", uuid: UUID(), color: 7, image: UIImage(), dateAdded: "", category: .Furniture),
-                                         Item(name: "Desk",   description: "it sits", uuid: UUID(), color: 7, image: UIImage(), dateAdded: "", category: .Furniture),
-                                         Item(name: "Wallet", description: "it sits", uuid: UUID(), color: 7, image: UIImage(), dateAdded: "", category: .Treasures),
-                                         Item(name: "Purse",  description: "it sits", uuid: UUID(), color: 7, image: UIImage(), dateAdded: "", category: .Treasures),
-                                         Item(name: "Hat",    description: "it sits", uuid: UUID(), color: 7, image: UIImage(), dateAdded: "", category: .Memories)])
+        user = User(name: "Joe", items: [Item(name: "Chair",  description: "it sits", uuid: UUID(), color: "", image: UIImage(), dateAdded: "", category: .Furniture),
+                                         Item(name: "Desk",   description: "it sits", uuid: UUID(), color: "", image: UIImage(), dateAdded: "", category: .Furniture),
+                                         Item(name: "Wallet", description: "it sits", uuid: UUID(), color: "", image: UIImage(), dateAdded: "", category: .Treasures),
+                                         Item(name: "Purse",  description: "it sits", uuid: UUID(), color: "", image: UIImage(), dateAdded: "", category: .Treasures),
+                                         Item(name: "Hat",    description: "it sits", uuid: UUID(), color: "", image: UIImage(), dateAdded: "", category: .Memories)])
     }
 
     override func viewDidAppear(_ animated: Bool) {
