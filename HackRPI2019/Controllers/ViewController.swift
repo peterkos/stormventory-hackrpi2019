@@ -33,17 +33,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
 
-        // NETWORK THINGS
-        let url = URL(fileURLWithPath: "http://159.203.106.254/")
-        print(url)
 
-        URLSession.shared.dataTask(with: url) { (data, response, error) in
-            if let error = error {
-                print(error.localizedDescription)
-            }
-            print("data: \(data)")
-            print("response: \(response)")
-        }.resume()
 
 
     }

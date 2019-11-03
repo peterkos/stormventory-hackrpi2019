@@ -8,6 +8,7 @@
 
 import UIKit
 import Auth0
+import SwiftyJSON
 
 class LoginViewController: UIViewController {
 
@@ -28,9 +29,7 @@ class LoginViewController: UIViewController {
                     // @TODO: Send these to backend somehow
                     print("Credentials: \(credentials)")
 
-                    DispatchQueue.main.async {
-                        self.performSegue(withIdentifier: "loginFinishedSegue", sender: nil)
-                    }
+                    self.getUserData()
 
                 }
             }
@@ -42,18 +41,11 @@ class LoginViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // @FIXME: Pull user data from server after auth!
-        // This is TEST DATA for now.
-        user = User(name: "Joe", items: [Item(name: "Chair",  description: "it sits", uuid: UUID(), color: "", image: UIImage(), dateAdded: "", category: .Furniture),
-                                         Item(name: "Desk",   description: "it sits", uuid: UUID(), color: "", image: UIImage(), dateAdded: "", category: .Furniture),
-                                         Item(name: "Wallet", description: "it sits", uuid: UUID(), color: "", image: UIImage(), dateAdded: "", category: .Treasures),
-                                         Item(name: "Purse",  description: "it sits", uuid: UUID(), color: "", image: UIImage(), dateAdded: "", category: .Treasures),
-                                         Item(name: "Hat",    description: "it sits", uuid: UUID(), color: "", image: UIImage(), dateAdded: "", category: .Memories)])
     }
 
     override func viewDidAppear(_ animated: Bool) {
-        self.performSegue(withIdentifier: "loginFinishedSegue", sender: nil)
+        // @FIXME: Testing. Skip login by uncommenting below.
+//        getUserData()
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -67,5 +59,62 @@ class LoginViewController: UIViewController {
                 tabVC.user = user!
             }
         }
+    }
+
+    // MARK: Functions
+
+    func getUserData() {
+
+        // NETWORK THINGS
+        let url = URL(string: "http://167.71.252.89:8000/api/items/")!
+
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                print(error.localizedDescription)
+                return
+            }
+
+            // Attempt to convert json
+            var json: JSON
+            do {
+                json = try JSON(data: data!)
+            } catch {
+                print("Unable to convert json")
+                return
+            }
+
+            // Json output
+            print(json)
+
+            // Jump down a level
+            json = json[0]
+
+            // Manually build the item
+            // @FIXME: Update as database is updated
+            // @TODO: Parse date
+            // @TODO: Parse UUID safely (a.k.a. make backend generate correct ones all the time)
+            let item = Item(name: json["name"].stringValue,
+                            description: json["description"].stringValue,
+                            uuid: UUID(),
+                            color: json["color"].stringValue,
+                            image: json["image"].stringValue,
+                            dateAdded: json["created_at"].stringValue,
+                            category: .Other)
+
+
+            // Create dummy user with just this one item for now
+            let user = User(name: "Bach", items: [item])
+            print(user)
+
+            // Pass it forward!
+            self.user = user
+
+            // Go to next screen
+            DispatchQueue.main.async {
+                self.performSegue(withIdentifier: "loginFinishedSegue", sender: nil)
+            }
+
+
+        }.resume()
     }
 }

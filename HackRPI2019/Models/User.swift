@@ -22,7 +22,7 @@ struct Item {
     var description: String
     var uuid: UUID
     var color: String
-    var image: UIImage
+    var image: String
     var dateAdded: String //@TODO: Parse to date lol
     var category: Category
 }
@@ -33,4 +33,5 @@ enum Category: String, CaseIterable {
     case Furniture
     case Treasures
     case Memories
+    case Other
 }
