@@ -13,8 +13,7 @@ class LoginViewController: UIViewController {
 
     @IBAction func loginPressed(_ sender: Any) {
 
-
-        // @TODO: Check for login
+        // @TODO: Check if logged in? Seems to work fine tho!
         // @TODO: Settle on how "profile" scope is needed
         Auth0.webAuth()
             .scope("openid profile")
@@ -28,20 +27,37 @@ class LoginViewController: UIViewController {
                     // Auth0 auto dimsisses view
                     // @TODO: Send these to backend somehow
                     print("Credentials: \(credentials)")
-                    self.performSegue(withIdentifier: "loginFinishedSegue", sender: nil)
+
+                    DispatchQueue.main.async {
+                        self.performSegue(withIdentifier: "loginFinishedSegue", sender: nil)
+                    }
+
                 }
             }
-        
-
     }
 
+
+    // MARK: Properties
+    var user: User?
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        // @FIXME: Pull user data from server after auth!
+        // This is TEST DATA for now.
+        user = User(name: "Joe", items: [Item(name: "Chair", description: "it sits", uuid: UUID(), color: 7, image: UIImage(), dateAdded: "", category: .Furniture)])
     }
 
-    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if (segue.identifier == "loginFinishedSegue") {
 
+            // Check for MainTabBarController
+            if let tabVC = segue.destination as? MainTabBarViewController {
+
+                // Pass data to the tab bar controller, which will handle passing its own children
+                // @FIXME: User error checking just before this in case login data is borked.
+                tabVC.user = user!
+            }
+        }
+    }
 }

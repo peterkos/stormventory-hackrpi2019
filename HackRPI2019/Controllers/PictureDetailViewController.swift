@@ -8,12 +8,13 @@
 
 import UIKit
 
-class PictureDetailViewController: UIViewController {
 
+// @FIXME: Integrate this back with ViewController once structure is better implemented.
+
+class PictureDetailViewController: UIViewController {
 
     // MARK: IBOutlets and IBActions
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var textView: UITextView!
 
     // MARK: Properties
     var image: UIImage!

@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		69BA3F85035C257153D540BC /* Pods_HackRPI2019.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC8BA6E7FFBF758C785FF72 /* Pods_HackRPI2019.framework */; };
+		D7831A9D236EA3B500B92E24 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7831A9C236EA3B500B92E24 /* User.swift */; };
+		D7831A9F236EA6D500B92E24 /* StorageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7831A9E236EA6D500B92E24 /* StorageCollectionViewController.swift */; };
+		D7831AA3236EA7EA00B92E24 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7831AA2236EA7EA00B92E24 /* MainTabBarViewController.swift */; };
 		D7A0D40B236E1B760072097A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A0D40A236E1B760072097A /* AppDelegate.swift */; };
 		D7A0D412236E1B760072097A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A0D410236E1B760072097A /* Main.storyboard */; };
 		D7A0D414236E1B760072097A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7A0D413236E1B760072097A /* Assets.xcassets */; };
@@ -23,6 +26,9 @@
 		242F98061E0550A9D3E579D2 /* Pods-HackRPI2019.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackRPI2019.release.xcconfig"; path = "Target Support Files/Pods-HackRPI2019/Pods-HackRPI2019.release.xcconfig"; sourceTree = "<group>"; };
 		CCC8BA6E7FFBF758C785FF72 /* Pods_HackRPI2019.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackRPI2019.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB06C64721BED214F978A6B /* Pods-HackRPI2019.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackRPI2019.debug.xcconfig"; path = "Target Support Files/Pods-HackRPI2019/Pods-HackRPI2019.debug.xcconfig"; sourceTree = "<group>"; };
+		D7831A9C236EA3B500B92E24 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		D7831A9E236EA6D500B92E24 /* StorageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCollectionViewController.swift; sourceTree = "<group>"; };
+		D7831AA2236EA7EA00B92E24 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
 		D7A0D407236E1B760072097A /* Stormventory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stormventory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A0D40A236E1B760072097A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7A0D411236E1B760072097A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -57,6 +63,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		D7831A9B236EA3A500B92E24 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				D7831A9C236EA3B500B92E24 /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		D7A0D3FE236E1B760072097A = {
 			isa = PBXGroup;
 			children = (
@@ -78,6 +92,7 @@
 		D7A0D409236E1B760072097A /* HackRPI2019 */ = {
 			isa = PBXGroup;
 			children = (
+				D7831A9B236EA3A500B92E24 /* Models */,
 				D7F5B592236E8DB10082DD1C /* Auth0 */,
 				D7A0D420236E1F1A0072097A /* Controllers */,
 				D7A0D40A236E1B760072097A /* AppDelegate.swift */,
@@ -94,6 +109,8 @@
 			isa = PBXGroup;
 			children = (
 				D7F5B595236E8E780082DD1C /* LoginViewController.swift */,
+				D7831AA2236EA7EA00B92E24 /* MainTabBarViewController.swift */,
+				D7831A9E236EA6D500B92E24 /* StorageCollectionViewController.swift */,
 				D7A0D421236E1FA80072097A /* ViewController.swift */,
 				D7A0D41E236E1F140072097A /* PictureDetailViewController.swift */,
 			);
@@ -233,7 +250,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7A0D422236E1FA80072097A /* ViewController.swift in Sources */,
+				D7831AA3236EA7EA00B92E24 /* MainTabBarViewController.swift in Sources */,
 				D7F5B591236E2FC30082DD1C /* Keys.swift in Sources */,
+				D7831A9F236EA6D500B92E24 /* StorageCollectionViewController.swift in Sources */,
+				D7831A9D236EA3B500B92E24 /* User.swift in Sources */,
 				D7A0D40B236E1B760072097A /* AppDelegate.swift in Sources */,
 				D7F5B596236E8E780082DD1C /* LoginViewController.swift in Sources */,
 				D7A0D41F236E1F140072097A /* PictureDetailViewController.swift in Sources */,

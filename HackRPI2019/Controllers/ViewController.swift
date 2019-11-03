@@ -9,6 +9,13 @@
 import UIKit
 import SwiftyJSON
 
+
+// @FIXME: THIS.
+// DEAD CODE FOR NOW
+// Will refactor out piece by piece into view controllers that better
+// represent the individual functionality that this monolithic class did all at once.
+
+
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBAction func takePicture(_ sender: Any) {
@@ -25,7 +32,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         // Initialize and configure image picker
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
-
 
         // NETWORK THINGS
         let url = URL(fileURLWithPath: "http://159.203.106.254/")
