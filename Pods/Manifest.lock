@@ -1,6 +1,9 @@
 PODS:
   - Auth0 (1.19.1):
     - SimpleKeychain
+  - IBMSwiftSDKCore (1.0.0)
+  - IBMWatsonVisualRecognitionV3 (3.0.0):
+    - IBMSwiftSDKCore (~> 1.0.0)
   - SimpleKeychain (0.9.0)
   - SVProgressHUD (2.2.5)
   - SwiftyJSON (4.3.0)
@@ -8,6 +11,7 @@ PODS:
 
 DEPENDENCIES:
   - Auth0 (~> 1.18)
+  - IBMWatsonVisualRecognitionV3 (~> 3.0.0)
   - SVProgressHUD
   - SwiftyJSON (~> 4.0)
   - VegaScrollFlowLayout
@@ -15,6 +19,8 @@ DEPENDENCIES:
 SPEC REPOS:
   trunk:
     - Auth0
+    - IBMSwiftSDKCore
+    - IBMWatsonVisualRecognitionV3
     - SimpleKeychain
     - SVProgressHUD
     - SwiftyJSON
@@ -22,11 +28,13 @@ SPEC REPOS:
 
 SPEC CHECKSUMS:
   Auth0: 5b3f517e223ed6fc4551c58ee0357afb8eb183e6
+  IBMSwiftSDKCore: 54ad77b03a4d27b218ba514580197db3b89a96ca
+  IBMWatsonVisualRecognitionV3: b6cfbeb1a40ed0621a88c0e67aecf47a1b48bb2e
   SimpleKeychain: 3be49072fd2d82de8fa83d847ef1e548622f8fc5
   SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   VegaScrollFlowLayout: 9158061f29179147755f937c2b21693fc5dbbac3
 
-PODFILE CHECKSUM: f0a883862c099feb55c7d84d7059ef2fd322eb7b
+PODFILE CHECKSUM: eac5d452dbfb8f92e99f339f9df9ca73b6cf7709
 
 COCOAPODS: 1.8.1

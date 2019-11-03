@@ -11,6 +11,6 @@ import Foundation
 
 // API things (mainly for IBM Cloud)
 
-let apikey = "API_KEY_HERE"
+let apikey = "Jff39czKgef-lHclSkj4AOT49oYOSNECQR0ANMdRsPcy"
 let apiurl = "https://gateway.watsonplatform.net/visual-recognition/api"
 

@@ -10,5 +10,7 @@ target 'HackRPI2019' do
   pod 'Auth0', '~> 1.18'
   pod 'VegaScrollFlowLayout'
   pod 'SVProgressHUD'
+  pod 'IBMWatsonVisualRecognitionV3', '~> 3.0.0'
+
 
 end

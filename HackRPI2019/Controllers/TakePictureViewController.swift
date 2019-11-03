@@ -9,6 +9,7 @@
 import UIKit
 import SVProgressHUD
 import SwiftyJSON
+import VisualRecognition
 
 class TakePictureViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UserDataHandler {
 
@@ -46,39 +47,29 @@ class TakePictureViewController: UIViewController, UINavigationControllerDelegat
                 SVProgressHUD.show()
             }
 
-            let base64Image = self.image?.jpegData(compressionQuality: 0.0)!.base64EncodedString()
+            let authenticator = WatsonIAMAuthenticator(apiKey: "Jff39czKgef-lHclSkj4AOT49oYOSNECQR0ANMdRsPcy")
+            let visReg = VisualRecognition(version: "2019-11-02", authenticator: authenticator)
+            visReg.serviceURL = "https://gateway.watsonplatform.net/visual-recognition/api"
 
-            // Same API I guess #backend amirite
-            let url = URL(string: "http://167.71.252.89:8000/api/items/")!
-            var request = URLRequest(url: url)
-            request.httpMethod = "POST"
-            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
-
-            let json = JSON(base64Image)
-            print("json: \(json)")
-
-            request.httpBody = try? JSONSerialization.data(withJSONObject: ["image": base64Image], options: [])
-
-
-            DispatchQueue.main.async {
-                SVProgressHUD.dismiss()
+            guard self.image != nil else {
+                print("No image, boss")
+                return
             }
 
-            print("about to post")
-            // Post to server
-            URLSession.shared.dataTask(with: request) { (data, response, error) in
-                if let error = error {
-                    print(error.localizedDescription)
-                    return
-                }
+            visReg.classify(image: self.image!, threshold: 0.5, owners: ["me"], classifierIDs: ["default"], acceptLanguage: "en") { (response, error) in
+                guard error == nil else {
+                      print(error)
+                      return
+                  }
 
-                // Send data to next VC
-                DispatchQueue.main.async {
-//                    self.performSegue(withIdentifier: "pictureDetailSegue", sender: nil)
-                    self.sendDataBack()
-                    print("sending data back!")
-                }
+                  print("Headers")
+                  print(response?.headers)
+                  print("Result")
+                  print(response?.result)
+
             }
+
+
 
         }
 

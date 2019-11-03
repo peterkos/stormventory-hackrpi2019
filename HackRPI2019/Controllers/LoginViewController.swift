@@ -51,7 +51,7 @@ class LoginViewController: UIViewController {
 
         user = User(name: "Peter", items: [Item(name: "Grandma's Chair", description: "From a long time ago", uuid: UUID(), color: "red", image: "", dateAdded: "Last Tuesday", category: .Other),
                                            Item(name: "Tom's Hat", description: "Given by the great himself.", uuid: UUID(), color: "blue", image: "", dateAdded: "Today", category: .Treasures)])
-//        self.performSegue(withIdentifier: "loginFinishedSegue", sender: nil)
+        self.performSegue(withIdentifier: "loginFinishedSegue", sender: nil)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
