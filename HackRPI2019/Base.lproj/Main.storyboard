@@ -14,7 +14,7 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Stormventory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44O-6y-uZb">
@@ -125,7 +125,7 @@
                         <viewLayoutGuide key="safeArea" id="2AN-Fp-CwE"/>
                     </view>
                     <connections>
-                        <segue destination="BYZ-38-t0r" kind="show" identifier="loginFinishedSegue" id="E49-eY-D2C"/>
+                        <segue destination="BYZ-38-t0r" kind="presentation" identifier="loginFinishedSegue" modalPresentationStyle="fullScreen" id="E49-eY-D2C"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZOM-zx-6ip" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
