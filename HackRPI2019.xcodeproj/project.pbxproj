@@ -19,7 +19,6 @@
 		D7A0D414236E1B760072097A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D7A0D413236E1B760072097A /* Assets.xcassets */; };
 		D7A0D417236E1B760072097A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D7A0D415236E1B760072097A /* LaunchScreen.storyboard */; };
 		D7A0D41F236E1F140072097A /* PictureDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A0D41E236E1F140072097A /* PictureDetailViewController.swift */; };
-		D7A0D422236E1FA80072097A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A0D421236E1FA80072097A /* ViewController.swift */; };
 		D7F5B591236E2FC30082DD1C /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F5B590236E2FC30082DD1C /* Keys.swift */; };
 		D7F5B594236E8DD40082DD1C /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7F5B593236E8DD40082DD1C /* Auth0.plist */; };
 		D7F5B596236E8E780082DD1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F5B595236E8E780082DD1C /* LoginViewController.swift */; };
@@ -42,7 +41,6 @@
 		D7A0D416236E1B760072097A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D7A0D418236E1B760072097A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D7A0D41E236E1F140072097A /* PictureDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureDetailViewController.swift; sourceTree = "<group>"; };
-		D7A0D421236E1FA80072097A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D7F5B590236E2FC30082DD1C /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
 		D7F5B593236E8DD40082DD1C /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Auth0.plist; sourceTree = "<group>"; };
 		D7F5B595236E8E780082DD1C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
@@ -126,7 +124,6 @@
 				D7F5B595236E8E780082DD1C /* LoginViewController.swift */,
 				D7831AA2236EA7EA00B92E24 /* MainTabBarViewController.swift */,
 				D7831A9E236EA6D500B92E24 /* StorageCollectionViewController.swift */,
-				D7A0D421236E1FA80072097A /* ViewController.swift */,
 				D7A0D41E236E1F140072097A /* PictureDetailViewController.swift */,
 				D716F669236F11750037545C /* TakePictureViewController.swift */,
 				D716F667236EC5F70037545C /* ItemDetailTableViewController.swift */,
@@ -266,7 +263,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D7A0D422236E1FA80072097A /* ViewController.swift in Sources */,
 				D716F668236EC5F70037545C /* ItemDetailTableViewController.swift in Sources */,
 				D7831AA3236EA7EA00B92E24 /* MainTabBarViewController.swift in Sources */,
 				D716F66A236F11750037545C /* TakePictureViewController.swift in Sources */,
