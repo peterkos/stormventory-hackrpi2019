@@ -8,5 +8,6 @@ target 'HackRPI2019' do
   # Pods for HackRPI2019
   pod 'SwiftyJSON', '~> 4.0'
   pod 'Auth0', '~> 1.18'
+  pod 'VegaScrollFlowLayout'
 
 end

@@ -7,8 +7,9 @@
 //
 
 import UIKit
+import VegaScrollFlowLayout
 
-private let reuseIdentifier = "Cell"
+private let reuseIdentifier = "itemCell"
 
 class StorageCollectionViewController: UICollectionViewController, UserDataHandler {
 
@@ -25,27 +26,35 @@ class StorageCollectionViewController: UICollectionViewController, UserDataHandl
         // Register cell classes
         self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
-        // Do any additional setup after loading the view.
+        let layout = VegaScrollFlowLayout()
+        layout.minimumLineSpacing = 20
+        layout.itemSize = CGSize(width: collectionView.frame.width - 40, height: 200)
+        layout.sectionInset = UIEdgeInsets(top: 40, left: 0, bottom: 40, right: 0)
+
+        self.collectionView.collectionViewLayout = layout
+
+        // @FIXME: This doens't like me, top bar now looks weird :c
+        edgesForExtendedLayout = [.bottom]
     }
 
 
     // MARK: UICollectionViewDataSource
 
     override func numberOfSections(in collectionView: UICollectionView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 0
+        return Category.allCases.count
     }
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of items
-        return 0
+
+        // Filter out items of each corresponding section type
+        return user.items.filter({ $0.category == Category.allCases[section]}).count
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath)
     
-        // Configure the cell
+        cell.backgroundColor = #colorLiteral(red: 0.2117647059, green: 0.2784313725, blue: 0.3450980392, alpha: 1)
     
         return cell
     }
