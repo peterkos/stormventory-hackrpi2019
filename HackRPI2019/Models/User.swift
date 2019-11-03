@@ -29,7 +29,7 @@ struct Item {
 
 // @TODO: Add more categories, define them better
 // @TODO: Let user add custom categories!
-enum Category: CaseIterable {
+enum Category: String, CaseIterable {
     case Furniture
     case Treasures
     case Memories

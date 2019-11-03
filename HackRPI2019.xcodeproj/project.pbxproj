@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		69BA3F85035C257153D540BC /* Pods_HackRPI2019.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CCC8BA6E7FFBF758C785FF72 /* Pods_HackRPI2019.framework */; };
+		D716F668236EC5F70037545C /* ItemDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D716F667236EC5F70037545C /* ItemDetailTableViewController.swift */; };
 		D7831A9D236EA3B500B92E24 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7831A9C236EA3B500B92E24 /* User.swift */; };
 		D7831A9F236EA6D500B92E24 /* StorageCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7831A9E236EA6D500B92E24 /* StorageCollectionViewController.swift */; };
 		D7831AA3236EA7EA00B92E24 /* MainTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7831AA2236EA7EA00B92E24 /* MainTabBarViewController.swift */; };
@@ -27,6 +28,7 @@
 		242F98061E0550A9D3E579D2 /* Pods-HackRPI2019.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackRPI2019.release.xcconfig"; path = "Target Support Files/Pods-HackRPI2019/Pods-HackRPI2019.release.xcconfig"; sourceTree = "<group>"; };
 		CCC8BA6E7FFBF758C785FF72 /* Pods_HackRPI2019.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackRPI2019.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB06C64721BED214F978A6B /* Pods-HackRPI2019.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackRPI2019.debug.xcconfig"; path = "Target Support Files/Pods-HackRPI2019/Pods-HackRPI2019.debug.xcconfig"; sourceTree = "<group>"; };
+		D716F667236EC5F70037545C /* ItemDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ItemDetailTableViewController.swift; sourceTree = "<group>"; };
 		D7831A9C236EA3B500B92E24 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		D7831A9E236EA6D500B92E24 /* StorageCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageCollectionViewController.swift; sourceTree = "<group>"; };
 		D7831AA2236EA7EA00B92E24 /* MainTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainTabBarViewController.swift; sourceTree = "<group>"; };
@@ -124,6 +126,7 @@
 				D7831A9E236EA6D500B92E24 /* StorageCollectionViewController.swift */,
 				D7A0D421236E1FA80072097A /* ViewController.swift */,
 				D7A0D41E236E1F140072097A /* PictureDetailViewController.swift */,
+				D716F667236EC5F70037545C /* ItemDetailTableViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -261,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D7A0D422236E1FA80072097A /* ViewController.swift in Sources */,
+				D716F668236EC5F70037545C /* ItemDetailTableViewController.swift in Sources */,
 				D7831AA3236EA7EA00B92E24 /* MainTabBarViewController.swift in Sources */,
 				D7F5B591236E2FC30082DD1C /* Keys.swift in Sources */,
 				D7831AA6236EB95300B92E24 /* ItemCollectionViewCell.swift in Sources */,

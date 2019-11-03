@@ -16,6 +16,7 @@ class StorageCollectionViewController: UICollectionViewController, UserDataHandl
 
     // MARK: Properties
     var user: User!
+    var selectedItemIndex: Int?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,6 +30,12 @@ class StorageCollectionViewController: UICollectionViewController, UserDataHandl
 
         // @FIXME: This doens't like me, top bar now looks weird :c
         edgesForExtendedLayout = [.bottom]
+    }
+
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        // Large title!
+        self.navigationController?.navigationBar.prefersLargeTitles = true
     }
 
 
@@ -47,7 +54,13 @@ class StorageCollectionViewController: UICollectionViewController, UserDataHandl
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! ItemCollectionViewCell
-    
+
+
+        // Configure data
+        cell.title.text = user.items[indexPath.row].name
+        cell.addedDate.text = user.items[indexPath.row].dateAdded
+
+        // Pretty things!
         cell.imageView.backgroundColor = #colorLiteral(red: 0.2117647059, green: 0.2784313725, blue: 0.3450980392, alpha: 1)
         cell.imageView.layer.masksToBounds = true
         cell.backgroundColor = .white
@@ -83,6 +96,12 @@ class StorageCollectionViewController: UICollectionViewController, UserDataHandl
     }
     */
 
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        selectedItemIndex = indexPath.row
+        print("selected at index \(selectedItemIndex!)")
+        self.performSegue(withIdentifier: "itemDetailSegue", sender: nil)
+    }
+
     /*
     // Uncomment these methods to specify if an action menu should be displayed for the specified item, and react to actions performed on the item
     override func collectionView(_ collectionView: UICollectionView, shouldShowMenuForItemAt indexPath: IndexPath) -> Bool {
@@ -97,5 +116,22 @@ class StorageCollectionViewController: UICollectionViewController, UserDataHandl
     
     }
     */
+
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if segue.identifier == "itemDetailSegue" {
+
+            guard selectedItemIndex != nil else {
+                return
+            }
+
+            if let detailVC = segue.destination as? ItemDetailTableViewController {
+
+                // Set by colView:didSelectItemAt:()
+                detailVC.item = user.items[selectedItemIndex!]
+            }
+
+        }
+    }
 
 }
