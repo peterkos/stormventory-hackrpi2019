@@ -1,16 +1,24 @@
 PODS:
+  - Auth0 (1.19.1):
+    - SimpleKeychain
+  - SimpleKeychain (0.9.0)
   - SwiftyJSON (4.3.0)
 
 DEPENDENCIES:
+  - Auth0 (~> 1.18)
   - SwiftyJSON (~> 4.0)
 
 SPEC REPOS:
   trunk:
+    - Auth0
+    - SimpleKeychain
     - SwiftyJSON
 
 SPEC CHECKSUMS:
+  Auth0: 5b3f517e223ed6fc4551c58ee0357afb8eb183e6
+  SimpleKeychain: 3be49072fd2d82de8fa83d847ef1e548622f8fc5
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
 
-PODFILE CHECKSUM: 207adc093d97437b71227f8521c32a1a221b47bc
+PODFILE CHECKSUM: 1cf439688a159c6bcc925b0b924a556003d3221a
 
 COCOAPODS: 1.8.1

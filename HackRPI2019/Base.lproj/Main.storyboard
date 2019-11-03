@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Vgk-1I-0kT">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15509"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -11,9 +12,9 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="HackRPI2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Stormventory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="44O-6y-uZb">
@@ -28,6 +29,7 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Vk3-E8-lXU"/>
                     <connections>
                         <segue destination="kx5-8F-LDC" kind="show" identifier="pictureDetailSegue" id="hT5-8a-V7F"/>
                     </connections>
@@ -39,7 +41,7 @@
         <!--Picture Detail View Controller-->
         <scene sceneID="ixT-Fx-vak">
             <objects>
-                <viewController id="kx5-8F-LDC" customClass="PictureDetailViewController" customModule="HackRPI2019" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="kx5-8F-LDC" customClass="PictureDetailViewController" customModule="Stormventory" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="baS-0s-9xO">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -75,5 +77,69 @@
             </objects>
             <point key="canvasLocation" x="986.95652173913049" y="137.94642857142856"/>
         </scene>
+        <!--Login View Controller-->
+        <scene sceneID="wNh-Yy-Elh">
+            <objects>
+                <viewController id="Vgk-1I-0kT" customClass="LoginViewController" customModule="Stormventory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tuV-Y1-OSO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QEe-xJ-IYE">
+                                <rect key="frame" x="93" y="736" width="228" height="50"/>
+                                <color key="backgroundColor" name="baseColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="8Iw-aL-s8r"/>
+                                    <constraint firstAttribute="width" constant="228" id="pTN-dM-eQG"/>
+                                </constraints>
+                                <state key="normal" title="Login">
+                                    <color key="titleColor" name="lightcolor"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginPressed:" destination="Vgk-1I-0kT" eventType="touchUpInside" id="8Fd-9c-Xia"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginAppIcon" translatesAutoresizingMaskIntoConstraints="NO" id="aRu-Qr-DB0">
+                                <rect key="frame" x="87" y="102" width="240" height="250"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="aRu-Qr-DB0" secondAttribute="height" multiplier="24:25" id="7yT-Eh-dmE"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Save your belongings, one memory at a time." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DvQ-Xu-kN6">
+                                <rect key="frame" x="-5" y="399" width="425" height="98"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="DvQ-Xu-kN6" firstAttribute="centerY" secondItem="2AN-Fp-CwE" secondAttribute="centerY" id="0lM-JS-Xg2"/>
+                            <constraint firstItem="aRu-Qr-DB0" firstAttribute="leading" secondItem="2AN-Fp-CwE" secondAttribute="leading" constant="87" id="BMV-15-irl"/>
+                            <constraint firstItem="aRu-Qr-DB0" firstAttribute="top" secondItem="2AN-Fp-CwE" secondAttribute="top" constant="58" id="Cad-16-Awc"/>
+                            <constraint firstItem="aRu-Qr-DB0" firstAttribute="centerX" secondItem="2AN-Fp-CwE" secondAttribute="centerX" id="D4E-hK-nrp"/>
+                            <constraint firstItem="QEe-xJ-IYE" firstAttribute="centerX" secondItem="2AN-Fp-CwE" secondAttribute="centerX" id="JHs-sK-K0w"/>
+                            <constraint firstItem="DvQ-Xu-kN6" firstAttribute="centerX" secondItem="2AN-Fp-CwE" secondAttribute="centerX" id="Uxe-xn-TwH"/>
+                            <constraint firstItem="2AN-Fp-CwE" firstAttribute="bottom" secondItem="QEe-xJ-IYE" secondAttribute="bottom" constant="76" id="dWw-ic-hrN"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="2AN-Fp-CwE"/>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="loginFinishedSegue" id="E49-eY-D2C"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ZOM-zx-6ip" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-681.15942028985512" y="137.94642857142856"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="loginAppIcon" width="1024" height="1024"/>
+        <namedColor name="baseColor">
+            <color red="0.13400000333786011" green="0.15600000321865082" blue="0.19200000166893005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="lightcolor">
+            <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+    </resources>
 </document>

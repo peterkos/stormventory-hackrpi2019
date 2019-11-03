@@ -15,13 +15,15 @@
 		D7A0D41F236E1F140072097A /* PictureDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A0D41E236E1F140072097A /* PictureDetailViewController.swift */; };
 		D7A0D422236E1FA80072097A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7A0D421236E1FA80072097A /* ViewController.swift */; };
 		D7F5B591236E2FC30082DD1C /* Keys.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F5B590236E2FC30082DD1C /* Keys.swift */; };
+		D7F5B594236E8DD40082DD1C /* Auth0.plist in Resources */ = {isa = PBXBuildFile; fileRef = D7F5B593236E8DD40082DD1C /* Auth0.plist */; };
+		D7F5B596236E8E780082DD1C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D7F5B595236E8E780082DD1C /* LoginViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		242F98061E0550A9D3E579D2 /* Pods-HackRPI2019.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackRPI2019.release.xcconfig"; path = "Target Support Files/Pods-HackRPI2019/Pods-HackRPI2019.release.xcconfig"; sourceTree = "<group>"; };
 		CCC8BA6E7FFBF758C785FF72 /* Pods_HackRPI2019.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackRPI2019.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CDB06C64721BED214F978A6B /* Pods-HackRPI2019.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackRPI2019.debug.xcconfig"; path = "Target Support Files/Pods-HackRPI2019/Pods-HackRPI2019.debug.xcconfig"; sourceTree = "<group>"; };
-		D7A0D407236E1B760072097A /* HackRPI2019.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackRPI2019.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D7A0D407236E1B760072097A /* Stormventory.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Stormventory.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D7A0D40A236E1B760072097A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D7A0D411236E1B760072097A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D7A0D413236E1B760072097A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -30,6 +32,8 @@
 		D7A0D41E236E1F140072097A /* PictureDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PictureDetailViewController.swift; sourceTree = "<group>"; };
 		D7A0D421236E1FA80072097A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D7F5B590236E2FC30082DD1C /* Keys.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Keys.swift; sourceTree = "<group>"; };
+		D7F5B593236E8DD40082DD1C /* Auth0.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Auth0.plist; sourceTree = "<group>"; };
+		D7F5B595236E8E780082DD1C /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,7 +70,7 @@
 		D7A0D408236E1B760072097A /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D7A0D407236E1B760072097A /* HackRPI2019.app */,
+				D7A0D407236E1B760072097A /* Stormventory.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -74,6 +78,7 @@
 		D7A0D409236E1B760072097A /* HackRPI2019 */ = {
 			isa = PBXGroup;
 			children = (
+				D7F5B592236E8DB10082DD1C /* Auth0 */,
 				D7A0D420236E1F1A0072097A /* Controllers */,
 				D7A0D40A236E1B760072097A /* AppDelegate.swift */,
 				D7A0D410236E1B760072097A /* Main.storyboard */,
@@ -88,10 +93,19 @@
 		D7A0D420236E1F1A0072097A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				D7F5B595236E8E780082DD1C /* LoginViewController.swift */,
 				D7A0D421236E1FA80072097A /* ViewController.swift */,
 				D7A0D41E236E1F140072097A /* PictureDetailViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D7F5B592236E8DB10082DD1C /* Auth0 */ = {
+			isa = PBXGroup;
+			children = (
+				D7F5B593236E8DD40082DD1C /* Auth0.plist */,
+			);
+			path = Auth0;
 			sourceTree = "<group>";
 		};
 		E08D743C3CD89B9BFCE2FC1A /* Frameworks */ = {
@@ -121,7 +135,7 @@
 			);
 			name = HackRPI2019;
 			productName = HackRPI2019;
-			productReference = D7A0D407236E1B760072097A /* HackRPI2019.app */;
+			productReference = D7A0D407236E1B760072097A /* Stormventory.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -165,6 +179,7 @@
 				D7A0D417236E1B760072097A /* LaunchScreen.storyboard in Resources */,
 				D7A0D414236E1B760072097A /* Assets.xcassets in Resources */,
 				D7A0D412236E1B760072097A /* Main.storyboard in Resources */,
+				D7F5B594236E8DD40082DD1C /* Auth0.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -220,6 +235,7 @@
 				D7A0D422236E1FA80072097A /* ViewController.swift in Sources */,
 				D7F5B591236E2FC30082DD1C /* Keys.swift in Sources */,
 				D7A0D40B236E1B760072097A /* AppDelegate.swift in Sources */,
+				D7F5B596236E8E780082DD1C /* LoginViewController.swift in Sources */,
 				D7A0D41F236E1F140072097A /* PictureDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -373,8 +389,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.rit.HackRPI2019;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.rit.stormventory;
+				PRODUCT_NAME = Stormventory;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -393,8 +409,8 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = edu.rit.HackRPI2019;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = edu.rit.stormventory;
+				PRODUCT_NAME = Stormventory;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
