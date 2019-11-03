@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SwiftyJSON
 
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
@@ -24,6 +25,20 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         // Initialize and configure image picker
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
+
+
+        // NETWORK THINGS
+        let url = URL(fileURLWithPath: "http://159.203.106.254/")
+        print(url)
+
+        URLSession.shared.dataTask(with: url) { (data, response, error) in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+            print("data: \(data)")
+            print("response: \(response)")
+        }.resume()
+
 
     }
 
