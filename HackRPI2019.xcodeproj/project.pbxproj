@@ -123,12 +123,12 @@
 		D7A0D420236E1F1A0072097A /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				D716F669236F11750037545C /* TakePictureViewController.swift */,
 				D7F5B595236E8E780082DD1C /* LoginViewController.swift */,
 				D7831AA2236EA7EA00B92E24 /* MainTabBarViewController.swift */,
 				D7831A9E236EA6D500B92E24 /* StorageCollectionViewController.swift */,
 				D7A0D421236E1FA80072097A /* ViewController.swift */,
 				D7A0D41E236E1F140072097A /* PictureDetailViewController.swift */,
+				D716F669236F11750037545C /* TakePictureViewController.swift */,
 				D716F667236EC5F70037545C /* ItemDetailTableViewController.swift */,
 			);
 			path = Controllers;

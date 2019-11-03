@@ -8,6 +8,7 @@
 
 import UIKit
 import SVProgressHUD
+import SwiftyJSON
 
 class TakePictureViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate, UserDataHandler {
 
@@ -23,8 +24,13 @@ class TakePictureViewController: UIViewController, UINavigationControllerDelegat
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // Setup image picker
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
+
+        // Bottom bar icon and title
+        // @FIXME: Add custom icon, this does not run as-is.
+        self.tabBarItem.title = "Add Item"
     }
     
 
@@ -36,10 +42,42 @@ class TakePictureViewController: UIViewController, UINavigationControllerDelegat
         // Hide view
         imagePicker.dismiss(animated: true) {
 
-            // Show next VC
             DispatchQueue.main.async {
-//                self.performSegue(withIdentifier: "pictureDetailSegue", sender: nil)
-                self.sendDataBack()
+                SVProgressHUD.show()
+            }
+
+            let base64Image = self.image?.jpegData(compressionQuality: 0.0)!.base64EncodedString()
+
+            // Same API I guess #backend amirite
+            let url = URL(string: "http://167.71.252.89:8000/api/items/")!
+            var request = URLRequest(url: url)
+            request.httpMethod = "POST"
+            request.setValue("application/json", forHTTPHeaderField: "Content-Type")
+
+            let json = JSON(base64Image)
+            print("json: \(json)")
+
+            request.httpBody = try? JSONSerialization.data(withJSONObject: ["image": base64Image], options: [])
+
+
+            DispatchQueue.main.async {
+                SVProgressHUD.dismiss()
+            }
+
+            print("about to post")
+            // Post to server
+            URLSession.shared.dataTask(with: request) { (data, response, error) in
+                if let error = error {
+                    print(error.localizedDescription)
+                    return
+                }
+
+                // Send data to next VC
+                DispatchQueue.main.async {
+//                    self.performSegue(withIdentifier: "pictureDetailSegue", sender: nil)
+                    self.sendDataBack()
+                    print("sending data back!")
+                }
             }
 
         }

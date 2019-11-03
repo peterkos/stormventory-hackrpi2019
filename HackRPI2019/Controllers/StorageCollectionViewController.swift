@@ -32,8 +32,12 @@ class StorageCollectionViewController: UICollectionViewController, UserDataHandl
         edgesForExtendedLayout = []
         self.navigationController?.view.backgroundColor = .white
 
-        // hide back button
+        // Hide back button
         self.navigationItem.hidesBackButton = true
+
+        // Bottom bar icon and title
+        // @FIXME: Add custom icon, this does not run as-is.
+        self.tabBarItem.title = "Belongings"
     }
 
     override func viewWillAppear(_ animated: Bool) {

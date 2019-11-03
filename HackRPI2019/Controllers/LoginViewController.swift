@@ -29,7 +29,9 @@ class LoginViewController: UIViewController {
                     // @TODO: Send these to backend somehow
                     print("Credentials: \(credentials)")
 
-                    self.getUserData()
+                    // @FIXME: Uncomment when needed.
+//                    self.getUserData()
+                    self.performSegue(withIdentifier: "loginFinishedSegue", sender: nil)
 
                 }
             }
@@ -47,8 +49,9 @@ class LoginViewController: UIViewController {
         // @FIXME: Testing. Skip login by uncommenting below.
 //        getUserData()
 
-        user = User(name: "Joeb", items: [Item(name: "asdf", description: "desc", uuid: UUID(), color: "afs", image: "", dateAdded: "s", category: .Other)])
-        self.performSegue(withIdentifier: "loginFinishedSegue", sender: nil)
+        user = User(name: "Peter", items: [Item(name: "Grandma's Chair", description: "From a long time ago", uuid: UUID(), color: "red", image: "", dateAdded: "Last Tuesday", category: .Other),
+                                           Item(name: "Tom's Hat", description: "Given by the great himself.", uuid: UUID(), color: "blue", image: "", dateAdded: "Today", category: .Treasures)])
+//        self.performSegue(withIdentifier: "loginFinishedSegue", sender: nil)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
