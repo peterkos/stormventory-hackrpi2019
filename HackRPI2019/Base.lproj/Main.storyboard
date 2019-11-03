@@ -15,7 +15,7 @@
             <objects>
                 <collectionViewController id="ggm-Ep-m6w" customClass="StorageCollectionViewController" customModule="Stormventory" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="W6R-c6-73m">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="725"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="n9k-pX-NPC">
@@ -87,6 +87,7 @@
                             <outlet property="delegate" destination="ggm-Ep-m6w" id="1ng-16-xTA"/>
                         </connections>
                     </collectionView>
+                    <extendedEdge key="edgesForExtendedLayout"/>
                     <navigationItem key="navigationItem" title="Your Belongings" id="ozC-ZH-X7h"/>
                     <connections>
                         <segue destination="rSf-BC-eIk" kind="show" identifier="itemDetailSegue" id="Lpm-hf-JJA"/>
@@ -405,6 +406,7 @@
             <objects>
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="2P4-lF-7By" customClass="MainTabBarViewController" customModule="Stormventory" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="9nR-iv-Xbj"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="YxX-mW-rVe">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -412,17 +414,19 @@
                     </tabBar>
                     <connections>
                         <segue destination="7KM-ri-IWB" kind="relationship" relationship="viewControllers" id="OQl-Jc-lyh"/>
+                        <segue destination="aeV-su-cV3" kind="relationship" relationship="viewControllers" id="dfD-3J-eZv"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lbJ-XZ-fvu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="312" y="138"/>
         </scene>
-        <!--Item-->
+        <!--Navigation Controller-->
         <scene sceneID="5co-kO-X3p">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7KM-ri-IWB" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="5cX-Px-It9"/>
+                    <extendedEdge key="edgesForExtendedLayout" top="YES"/>
+                    <tabBarItem key="tabBarItem" systemItem="bookmarks" id="5cX-Px-It9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fuh-va-JIb">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -437,50 +441,235 @@
             </objects>
             <point key="canvasLocation" x="1632" y="138"/>
         </scene>
-        <!--Root View Controller-->
-        <scene sceneID="L3k-jw-vEM">
-            <objects>
-                <tableViewController id="U96-J9-7B1" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="1Vs-P2-bU8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="Q7A-4e-CZL">
-                                <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Q7A-4e-CZL" id="Igj-ZH-IWU">
-                                    <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="U96-J9-7B1" id="Slc-M1-gax"/>
-                            <outlet property="delegate" destination="U96-J9-7B1" id="pua-f9-37v"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Root View Controller" id="zp4-9b-NAm"/>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Pjd-Sz-pib" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2435" y="846"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="okY-bl-rcp">
             <objects>
                 <navigationController id="aeV-su-cV3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" systemItem="more" id="qA7-U9-Ap9"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="1sq-J2-FCx">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <connections>
-                        <segue destination="U96-J9-7B1" kind="relationship" relationship="rootViewController" id="uaU-jC-i5h"/>
+                        <segue destination="CUb-B8-rLx" kind="relationship" relationship="rootViewController" id="ddO-Yy-jJj"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sLC-he-GP7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1632" y="846"/>
+        </scene>
+        <!--Take Picture View Controller-->
+        <scene sceneID="ozn-I5-vMM">
+            <objects>
+                <viewController id="CUb-B8-rLx" customClass="TakePictureViewController" customModule="Stormventory" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Qx-mt-RP5">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X7u-Rq-2vf">
+                                <rect key="frame" x="56" y="110" width="303" height="164"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Use AI to auto-match your things. ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.13988" green="0.17080000000000001" blue="0.22223999999999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="40" name="Avenir-Heavy"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="46" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zGN-3y-Czx">
+                                <rect key="frame" x="56" y="407.5" width="302" height="81"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="81" id="wax-WX-TGh"/>
+                                </constraints>
+                                <attributedString key="attributedText">
+                                    <fragment content="Take a picture of a belonging, and let ">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="18" name="Avenir-Book"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="28">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="56">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="84">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="112">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="140">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="168">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="196">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="224">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="252">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="280">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="308">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="336">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="IBM Watson">
+                                        <attributes>
+                                            <color key="NSColor" red="0.30698999999999999" green="0.67781000000000002" blue="0.70589000000000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="18" name="Avenir-Heavy"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="28">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="56">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="84">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="112">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="140">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="168">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="196">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="224">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="252">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="280">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="308">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="336">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content=" categorize what it is.">
+                                        <attributes>
+                                            <color key="NSColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            <font key="NSFont" size="18" name="Avenir-Book"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="1" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops>
+                                                    <textTab alignment="left" location="28">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="56">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="84">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="112">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="140">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="168">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="196">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="224">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="252">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="280">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="308">
+                                                        <options/>
+                                                    </textTab>
+                                                    <textTab alignment="left" location="336">
+                                                        <options/>
+                                                    </textTab>
+                                                </tabStops>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O9t-Ja-A0G">
+                                <rect key="frame" x="93" y="673" width="228" height="50"/>
+                                <color key="backgroundColor" name="baseColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="otI-9J-Fw8"/>
+                                    <constraint firstAttribute="width" constant="228" id="qpJ-dZ-Cw0"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Add a new item">
+                                    <color key="titleColor" name="lightcolor"/>
+                                </state>
+                                <connections>
+                                    <action selector="takePicture:" destination="CUb-B8-rLx" eventType="touchUpInside" id="exT-WC-JbL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="X7u-Rq-2vf" firstAttribute="top" secondItem="KQt-WW-NL5" secondAttribute="top" constant="22" id="DBV-H3-0Dg"/>
+                            <constraint firstItem="zGN-3y-Czx" firstAttribute="centerX" secondItem="O9t-Ja-A0G" secondAttribute="centerX" id="K6f-zJ-ld9"/>
+                            <constraint firstItem="KQt-WW-NL5" firstAttribute="trailing" secondItem="X7u-Rq-2vf" secondAttribute="trailing" constant="55" id="SkN-83-OSq"/>
+                            <constraint firstItem="zGN-3y-Czx" firstAttribute="leading" secondItem="KQt-WW-NL5" secondAttribute="leading" constant="56" id="b3N-Kd-RBe"/>
+                            <constraint firstItem="X7u-Rq-2vf" firstAttribute="leading" secondItem="KQt-WW-NL5" secondAttribute="leading" constant="56" id="d9N-Jf-HbJ"/>
+                            <constraint firstItem="zGN-3y-Czx" firstAttribute="leading" secondItem="X7u-Rq-2vf" secondAttribute="leading" id="fE0-6Z-lfg"/>
+                            <constraint firstItem="zGN-3y-Czx" firstAttribute="centerY" secondItem="6Qx-mt-RP5" secondAttribute="centerY" id="fvy-hc-5vc"/>
+                            <constraint firstItem="KQt-WW-NL5" firstAttribute="bottom" secondItem="O9t-Ja-A0G" secondAttribute="bottom" constant="90" id="ool-tY-xih"/>
+                            <constraint firstItem="O9t-Ja-A0G" firstAttribute="centerX" secondItem="KQt-WW-NL5" secondAttribute="centerX" id="xaQ-qJ-sXQ"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="KQt-WW-NL5"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="4ih-Ms-soE"/>
+                    <connections>
+                        <segue destination="ggm-Ep-m6w" kind="show" identifier="pictureDetailSegue" id="ZQY-Rl-Fet"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3tX-LS-Kmo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2434.7826086956525" y="845.75892857142856"/>
         </scene>
     </scenes>
     <resources>
@@ -496,4 +685,7 @@
             <color red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="ZQY-Rl-Fet"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -31,6 +31,9 @@ class StorageCollectionViewController: UICollectionViewController, UserDataHandl
         // @FIXME: Bug in VegaScrollFlowLayout
         edgesForExtendedLayout = []
         self.navigationController?.view.backgroundColor = .white
+
+        // hide back button
+        self.navigationItem.hidesBackButton = true
     }
 
     override func viewWillAppear(_ animated: Bool) {

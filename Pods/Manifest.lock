@@ -2,11 +2,13 @@ PODS:
   - Auth0 (1.19.1):
     - SimpleKeychain
   - SimpleKeychain (0.9.0)
+  - SVProgressHUD (2.2.5)
   - SwiftyJSON (4.3.0)
   - VegaScrollFlowLayout (1.1)
 
 DEPENDENCIES:
   - Auth0 (~> 1.18)
+  - SVProgressHUD
   - SwiftyJSON (~> 4.0)
   - VegaScrollFlowLayout
 
@@ -14,15 +16,17 @@ SPEC REPOS:
   trunk:
     - Auth0
     - SimpleKeychain
+    - SVProgressHUD
     - SwiftyJSON
     - VegaScrollFlowLayout
 
 SPEC CHECKSUMS:
   Auth0: 5b3f517e223ed6fc4551c58ee0357afb8eb183e6
   SimpleKeychain: 3be49072fd2d82de8fa83d847ef1e548622f8fc5
+  SVProgressHUD: 1428aafac632c1f86f62aa4243ec12008d7a51d6
   SwiftyJSON: 6faa0040f8b59dead0ee07436cbf76b73c08fd08
   VegaScrollFlowLayout: 9158061f29179147755f937c2b21693fc5dbbac3
 
-PODFILE CHECKSUM: 23c2796213edeb6bb77a64f27033e9112059ff0d
+PODFILE CHECKSUM: f0a883862c099feb55c7d84d7059ef2fd322eb7b
 
 COCOAPODS: 1.8.1

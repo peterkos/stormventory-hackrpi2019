@@ -46,6 +46,9 @@ class LoginViewController: UIViewController {
     override func viewDidAppear(_ animated: Bool) {
         // @FIXME: Testing. Skip login by uncommenting below.
 //        getUserData()
+
+        user = User(name: "Joeb", items: [Item(name: "asdf", description: "desc", uuid: UUID(), color: "afs", image: "", dateAdded: "s", category: .Other)])
+        self.performSegue(withIdentifier: "loginFinishedSegue", sender: nil)
     }
 
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
