@@ -24,12 +24,13 @@ class StorageCollectionViewController: UICollectionViewController, UserDataHandl
         let layout = VegaScrollFlowLayout()
         layout.minimumLineSpacing = 20
         layout.itemSize = CGSize(width: collectionView.frame.width - 40, height: 350)
-        layout.sectionInset = UIEdgeInsets(top: 40, left: 0, bottom: 40, right: 0)
+        layout.sectionInset = UIEdgeInsets(top: 20, left: 0, bottom: 40, right: 0)
 
         self.collectionView.collectionViewLayout = layout
 
-        // @FIXME: This doens't like me, top bar now looks weird :c
-        edgesForExtendedLayout = [.bottom]
+        // @FIXME: Bug in VegaScrollFlowLayout
+        edgesForExtendedLayout = []
+        self.navigationController?.view.backgroundColor = .white
     }
 
     override func viewWillAppear(_ animated: Bool) {

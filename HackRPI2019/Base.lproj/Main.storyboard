@@ -421,8 +421,7 @@
         <!--Item-->
         <scene sceneID="5co-kO-X3p">
             <objects>
-                <navigationController id="7KM-ri-IWB" sceneMemberID="viewController">
-                    <extendedEdge key="edgesForExtendedLayout"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7KM-ri-IWB" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Item" id="5cX-Px-It9"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="fuh-va-JIb">
