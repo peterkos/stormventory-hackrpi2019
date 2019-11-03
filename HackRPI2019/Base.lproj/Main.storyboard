@@ -92,6 +92,7 @@
                                     <constraint firstAttribute="height" constant="50" id="8Iw-aL-s8r"/>
                                     <constraint firstAttribute="width" constant="228" id="pTN-dM-eQG"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <state key="normal" title="Login">
                                     <color key="titleColor" name="lightcolor"/>
                                 </state>
@@ -105,22 +106,60 @@
                                     <constraint firstAttribute="width" secondItem="aRu-Qr-DB0" secondAttribute="height" multiplier="24:25" id="7yT-Eh-dmE"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Save your belongings, one memory at a time." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DvQ-Xu-kN6">
-                                <rect key="frame" x="-5" y="399" width="425" height="98"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Save your belongings, one memory at a time." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DvQ-Xu-kN6">
+                                <rect key="frame" x="106" y="501" width="202.5" height="55"/>
                                 <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="20"/>
                                 <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GdR-ou-idZ">
+                                <rect key="frame" x="53.5" y="420" width="307.5" height="66"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Storm">
+                                        <attributes>
+                                            <color key="NSColor" red="0.13988" green="0.17080000000000001" blue="0.22223999999999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="48" name="Avenir-Heavy"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="46" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="ven">
+                                        <attributes>
+                                            <color key="NSColor" red="0.40292" green="0.45066000000000001" blue="0.52420999999999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="48" name="Avenir-Heavy"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="46" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="tory">
+                                        <attributes>
+                                            <color key="NSColor" red="0.30706" green="0.67774000000000001" blue="0.70981000000000005" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                            <font key="NSFont" size="48" name="Avenir-Heavy"/>
+                                            <real key="NSKern" value="0.0"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="leftToRight" defaultTabInterval="46" tighteningFactorForTruncation="0.0" allowsDefaultTighteningForTruncation="NO">
+                                                <tabStops/>
+                                            </paragraphStyle>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="DvQ-Xu-kN6" firstAttribute="centerY" secondItem="2AN-Fp-CwE" secondAttribute="centerY" id="0lM-JS-Xg2"/>
+                            <constraint firstItem="GdR-ou-idZ" firstAttribute="centerY" secondItem="2AN-Fp-CwE" secondAttribute="centerY" id="5Ay-zM-Lpc"/>
                             <constraint firstItem="aRu-Qr-DB0" firstAttribute="leading" secondItem="2AN-Fp-CwE" secondAttribute="leading" constant="87" id="BMV-15-irl"/>
                             <constraint firstItem="aRu-Qr-DB0" firstAttribute="top" secondItem="2AN-Fp-CwE" secondAttribute="top" constant="58" id="Cad-16-Awc"/>
                             <constraint firstItem="aRu-Qr-DB0" firstAttribute="centerX" secondItem="2AN-Fp-CwE" secondAttribute="centerX" id="D4E-hK-nrp"/>
                             <constraint firstItem="QEe-xJ-IYE" firstAttribute="centerX" secondItem="2AN-Fp-CwE" secondAttribute="centerX" id="JHs-sK-K0w"/>
-                            <constraint firstItem="DvQ-Xu-kN6" firstAttribute="centerX" secondItem="2AN-Fp-CwE" secondAttribute="centerX" id="Uxe-xn-TwH"/>
+                            <constraint firstItem="DvQ-Xu-kN6" firstAttribute="top" secondItem="GdR-ou-idZ" secondAttribute="bottom" constant="15" id="Q8F-DP-Xvx"/>
                             <constraint firstItem="2AN-Fp-CwE" firstAttribute="bottom" secondItem="QEe-xJ-IYE" secondAttribute="bottom" constant="76" id="dWw-ic-hrN"/>
+                            <constraint firstItem="GdR-ou-idZ" firstAttribute="centerX" secondItem="2AN-Fp-CwE" secondAttribute="centerX" id="fMQ-gi-I6p"/>
+                            <constraint firstItem="DvQ-Xu-kN6" firstAttribute="centerX" secondItem="2AN-Fp-CwE" secondAttribute="centerX" id="pgm-E4-sFc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="2AN-Fp-CwE"/>
                     </view>
